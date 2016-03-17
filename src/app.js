@@ -6,5 +6,6 @@ Rx.Observable.ajax({
   url: 'http://swapi.co/api/people/1',
   crossDomain: true
 }).subscribe(data => {
-  document.body.innerText = typeof data.response;
+  console.log(data);
+  document.body.innerText = `typeof response: ${typeof data.response}, responseType: ${data.responseType}`;
 });
